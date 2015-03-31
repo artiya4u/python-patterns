@@ -12,11 +12,11 @@ def Memento(obj, deep=False):
     def Restore():
         obj.__dict__.clear()
         obj.__dict__.update(state)
+
     return Restore
 
 
 class Transaction:
-
     """A transaction guard. This is really just
       syntactic suggar arount a memento closure.
       """
@@ -35,7 +35,6 @@ class Transaction:
 
 
 class transactional(object):
-
     """Adds transactional semantics to methods. Methods decorated  with
     @transactional will rollback to entry state upon exceptions.
     """
@@ -51,11 +50,11 @@ class transactional(object):
             except:
                 state()
                 raise
+
         return transaction
 
 
 class NumObj(object):
-
     def __init__(self, value):
         self.value = value
 
@@ -68,7 +67,7 @@ class NumObj(object):
     @transactional
     def DoStuff(self):
         self.value = '1111'  # <- invalid value
-        self.Increment()     # <- will fail and rollback
+        self.Increment()  # <- will fail and rollback
 
 
 if __name__ == '__main__':
@@ -97,6 +96,7 @@ if __name__ == '__main__':
         print('-> doing stuff failed!')
         import sys
         import traceback
+
         traceback.print_exc(file=sys.stdout)
         pass
     print(n)
@@ -115,7 +115,7 @@ if __name__ == '__main__':
 # -- now doing stuff ...
 # -> doing stuff failed!
 # Traceback (most recent call last):
-#   File "memento.py", line 91, in <module>
+# File "memento.py", line 91, in <module>
 #     n.DoStuff()
 #   File "memento.py", line 47, in transaction
 #     return self.method(obj, *args, **kwargs)

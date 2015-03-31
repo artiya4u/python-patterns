@@ -22,16 +22,16 @@ print('Counting to two...')
 for number in count_to_two():
     print(number, end=' ')
 
-print()
+    print()
 
-print('Counting to five...')
-for number in count_to_five():
-    print(number, end=' ')
+    print('Counting to five...')
+    for number in count_to_five():
+        print(number, end=' ')
 
-print()
+        print()
 
-### OUTPUT ###
-# Counting to two...
-# one two
-# Counting to five...
-# one two three four five
+        ### OUTPUT ###
+        # Counting to two...
+        # one two
+        # Counting to five...
+        # one two three four five

@@ -3,7 +3,6 @@
 
 
 class Model(object):
-
     products = {
         'milk': {'price': 1.50, 'quantity': 10},
         'eggs': {'price': 0.20, 'quantity': 100},
@@ -12,7 +11,6 @@ class Model(object):
 
 
 class View(object):
-
     def product_list(self, product_list):
         print('PRODUCT LIST:')
         for product in product_list:
@@ -30,7 +28,6 @@ class View(object):
 
 
 class Controller(object):
-
     def __init__(self):
         self.model = Model()
         self.view = View()
@@ -48,7 +45,6 @@ class Controller(object):
 
 
 if __name__ == '__main__':
-
     controller = Controller()
     controller.get_product_list()
     controller.get_product_information('cheese')

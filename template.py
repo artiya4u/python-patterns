@@ -42,8 +42,10 @@ def reverse_item(item):
 # Makes templates
 def make_template(skeleton, getter, action):
     """Instantiate a template method with getter and action"""
+
     def template():
         skeleton(getter, action)
+
     return template
 
 # Create our template functions

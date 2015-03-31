@@ -5,7 +5,6 @@ import os
 
 
 class MoveFileCommand(object):
-
     def __init__(self, src, dest):
         self.src = src
         self.dest = dest
@@ -33,6 +32,7 @@ def main():
     # and can also be undone at will
     for cmd in reversed(command_stack):
         cmd.undo()
+
 
 if __name__ == "__main__":
     main()

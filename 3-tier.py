@@ -17,7 +17,6 @@ class Data(object):
 
 
 class BusinessLogic(object):
-
     """ Business logic holding data store instances """
 
     data = Data()
@@ -60,6 +59,7 @@ def main():
     ui.get_product_information('eggs')
     ui.get_product_information('milk')
     ui.get_product_information('arepas')
+
 
 if __name__ == '__main__':
     main()

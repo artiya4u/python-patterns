@@ -10,7 +10,6 @@ __gist__ = "<https://gist.github.com/diopib/7679559>"
 
 
 class Catalog():
-
     """
     catalog of multiple static methods that are executed depending on an init
     parameter
@@ -22,7 +21,7 @@ class Catalog():
         # to be executed but that will be also used to store possible param
         # value
         self._static_method_choices = {'param_value_1': self._static_method_1,
-                                      'param_value_2': self._static_method_2}
+                                       'param_value_2': self._static_method_2}
 
         # simple test to validate param value
         if param in self._static_method_choices.keys():
@@ -56,6 +55,7 @@ def main():
 
     test = Catalog('param_value_2')
     test.main_method()
+
 
 if __name__ == "__main__":
     main()

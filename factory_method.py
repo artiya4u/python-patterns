@@ -5,7 +5,6 @@
 
 
 class GreekGetter:
-
     """A simple localizer a la gettext"""
 
     def __init__(self):
@@ -20,7 +19,6 @@ class GreekGetter:
 
 
 class EnglishGetter:
-
     """Simply echoes the msg ids"""
 
     def get(self, msgid):

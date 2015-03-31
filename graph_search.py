@@ -3,7 +3,6 @@
 
 
 class GraphSearch:
-
     """Graph search emulation in python, from source
     http://www.python.org/doc/essays/graphs/"""
 
@@ -74,7 +73,6 @@ graph = {'A': ['B', 'C'],
 
 # initialization of new graph search object
 graph1 = GraphSearch(graph)
-
 
 print(graph1.find_path('A', 'D'))
 print(graph1.find_all_path('A', 'D'))

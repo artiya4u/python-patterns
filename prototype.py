@@ -5,7 +5,6 @@ import copy
 
 
 class Prototype:
-
     def __init__(self):
         self._objects = {}
 
@@ -42,6 +41,7 @@ def main():
     b = prototype.clone('objecta')
     c = prototype.clone('objecta', x=1, y=2, garbage=[88, 1])
     print([str(i) for i in (a, b, c)])
+
 
 if __name__ == '__main__':
     main()

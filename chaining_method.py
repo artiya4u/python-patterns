@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 class Person(object):
-
     def __init__(self, name, action):
         self.name = name
         self.action = action
@@ -11,8 +10,8 @@ class Person(object):
         print(self.name, self.action.name, end=' ')
         return self.action
 
-class Action(object):
 
+class Action(object):
     def __init__(self, name):
         self.name = name
 
@@ -23,8 +22,8 @@ class Action(object):
     def stop(self):
         print('then stop')
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     move = Action('move')
     person = Person('Jack', move)
     person.do_action().amount('5m').stop()
